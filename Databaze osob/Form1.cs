@@ -16,8 +16,6 @@ namespace Databaze_osob
         public FormHlavni()
         {
             InitializeComponent();
-            //nastaví na zaèátku foto
-            fotoPictureBox.Image = Bitmap.FromFile(@"images\person_null.png");
 
             //a pøipojí listbox k databazi
             osobyListBox.DataSource = databaze.Data;
@@ -53,16 +51,9 @@ namespace Databaze_osob
 
                 jmenoLabel.Text = ((Osoba)osobyListBox.SelectedItem).Jmeno;
                 prijmeniLabel.Text = ((Osoba)osobyListBox.SelectedItem).Prijmeni;
-                pohlaviLabel.Text = ((Osoba)osobyListBox.SelectedItem).Pohlavi ? "Muž" : "Žena";
-                poznamkalabel.Text = ((Osoba)osobyListBox.SelectedItem).Poznamka;
-                datumNarozeniLabel.Text = ((Osoba)osobyListBox.SelectedItem).DatumNarozeni.ToString("dd.MM.yyyy");
+                pohlaviLabel.Text = ((Osoba)osobyListBox.SelectedItem).Pohlavi ? "Loading" : "Loading";
 
-                vekLabel.Text = ((Osoba)osobyListBox.SelectedItem).Vek.ToString();
-
-                if (((Osoba)osobyListBox.SelectedItem).Foto != null)
-                    fotoPictureBox.Image = ((Osoba)osobyListBox.SelectedItem).Foto;
-                else
-                    fotoPictureBox.Image = Bitmap.FromFile(@"images\person_null.png");
+                vekLabel.Text = ((Osoba)osobyListBox.SelectedItem).ID.ToString();
             }
         }
 
@@ -149,10 +140,8 @@ namespace Databaze_osob
             jmenoLabel.Text = "-";
             prijmeniLabel.Text = "-";
             pohlaviLabel.Text = "-";
-            poznamkalabel.Text = "-";
             datumNarozeniLabel.Text = "-";
             vekLabel.Text = "";
-            fotoPictureBox.Image = Bitmap.FromFile(@"images\person_null.png");
         }
 
         //odpovjí a pøipojí data k listu aby se listbox obnovil
@@ -165,7 +154,7 @@ namespace Databaze_osob
         //info
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Design and code by Tomas Sobota");
+            MessageBox.Show("");
         }
 
         //konec programu
@@ -179,11 +168,11 @@ namespace Databaze_osob
         private void podleJménaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int podleCeho = 0;
-            if ((sender as ToolStripMenuItem).Text == "Podle jména")
+            if ((sender as ToolStripMenuItem).Text == "By First Name")
                 podleCeho = 1;
-            if ((sender as ToolStripMenuItem).Text == "Podle pøíjmení")
+            if ((sender as ToolStripMenuItem).Text == "By Last Name")
                 podleCeho = 2;
-            if ((sender as ToolStripMenuItem).Text == "Podle vìku")
+            if ((sender as ToolStripMenuItem).Text == "By ID")
                 podleCeho = 3;
 
 
@@ -216,7 +205,7 @@ namespace Databaze_osob
 
             try
             { 
-            databaze.Filtruj(filterTextBox.Text.Trim(), Convert.ToInt32(filterNumericUpDown.Value), filterComboBox.Text);
+            databaze.Filtruj(filterComboBox.Text);
             osobyListBox.DataSource = databaze.FiltrovanaData;
             }
             catch (Exception ex)
@@ -231,13 +220,57 @@ namespace Databaze_osob
             filterPanel.Visible = false;
             filterButton.Visible = true;
             filterNoButton.Visible = false;
-            filterTextBox.Text = "";
-            filterNumericUpDown.Value = 0;
+            
             databaze.ResetFiltru();
             RefreshData();
 
             
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vekLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 

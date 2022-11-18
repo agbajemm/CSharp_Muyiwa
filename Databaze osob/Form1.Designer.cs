@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHlavni));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.konecToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seřaditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.podleJménaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,11 +40,7 @@
             this.filterNoButton = new System.Windows.Forms.Button();
             this.filterPanel = new System.Windows.Forms.Panel();
             this.filterOK = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.filterComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.filterNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.filterTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.filterButton = new System.Windows.Forms.Button();
             this.upravitButton = new System.Windows.Forms.Button();
@@ -58,11 +53,8 @@
             this.datumNarozeniLabel = new System.Windows.Forms.Label();
             this.prijmeniLabel = new System.Windows.Forms.Label();
             this.jmenoLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.poznamkalabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,10 +62,7 @@
             this.menuStrip1.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.filterPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.filterNumericUpDown)).BeginInit();
             this.detailyPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.osobyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,31 +74,24 @@
             this.seřaditToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(982, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1228, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infoToolStripMenuItem,
             this.konecToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
-            this.infoToolStripMenuItem.Text = "Info";
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // konecToolStripMenuItem
             // 
             this.konecToolStripMenuItem.Name = "konecToolStripMenuItem";
-            this.konecToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
-            this.konecToolStripMenuItem.Text = "Konec";
+            this.konecToolStripMenuItem.Size = new System.Drawing.Size(157, 34);
+            this.konecToolStripMenuItem.Text = "Close";
             this.konecToolStripMenuItem.Click += new System.EventHandler(this.konecToolStripMenuItem_Click);
             // 
             // seřaditToolStripMenuItem
@@ -119,28 +101,28 @@
             this.poldePříjmeníToolStripMenuItem,
             this.podleVěkuToolStripMenuItem});
             this.seřaditToolStripMenuItem.Name = "seřaditToolStripMenuItem";
-            this.seřaditToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.seřaditToolStripMenuItem.Text = "Seřadit";
+            this.seřaditToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
+            this.seřaditToolStripMenuItem.Text = "Sort";
             // 
             // podleJménaToolStripMenuItem
             // 
             this.podleJménaToolStripMenuItem.Name = "podleJménaToolStripMenuItem";
-            this.podleJménaToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
-            this.podleJménaToolStripMenuItem.Text = "Podle jména";
+            this.podleJménaToolStripMenuItem.Size = new System.Drawing.Size(223, 34);
+            this.podleJménaToolStripMenuItem.Text = "By First Name";
             this.podleJménaToolStripMenuItem.Click += new System.EventHandler(this.podleJménaToolStripMenuItem_Click);
             // 
             // poldePříjmeníToolStripMenuItem
             // 
             this.poldePříjmeníToolStripMenuItem.Name = "poldePříjmeníToolStripMenuItem";
-            this.poldePříjmeníToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
-            this.poldePříjmeníToolStripMenuItem.Text = "Podle příjmení";
+            this.poldePříjmeníToolStripMenuItem.Size = new System.Drawing.Size(223, 34);
+            this.poldePříjmeníToolStripMenuItem.Text = "By Last Name";
             this.poldePříjmeníToolStripMenuItem.Click += new System.EventHandler(this.podleJménaToolStripMenuItem_Click);
             // 
             // podleVěkuToolStripMenuItem
             // 
             this.podleVěkuToolStripMenuItem.Name = "podleVěkuToolStripMenuItem";
-            this.podleVěkuToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
-            this.podleVěkuToolStripMenuItem.Text = "Podle věku";
+            this.podleVěkuToolStripMenuItem.Size = new System.Drawing.Size(223, 34);
+            this.podleVěkuToolStripMenuItem.Text = "By ID";
             this.podleVěkuToolStripMenuItem.Click += new System.EventHandler(this.podleJménaToolStripMenuItem_Click);
             // 
             // menuPanel
@@ -154,20 +136,22 @@
             this.menuPanel.Controls.Add(this.odebratButton);
             this.menuPanel.Controls.Add(this.pridatButton);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuPanel.Location = new System.Drawing.Point(0, 28);
+            this.menuPanel.Location = new System.Drawing.Point(0, 33);
+            this.menuPanel.Margin = new System.Windows.Forms.Padding(4);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(982, 113);
+            this.menuPanel.Size = new System.Drawing.Size(1228, 141);
             this.menuPanel.TabIndex = 1;
+            this.menuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.menuPanel_Paint);
             // 
             // filterNoButton
             // 
             this.filterNoButton.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.filterNoButton.Image = ((System.Drawing.Image)(resources.GetObject("filterNoButton.Image")));
-            this.filterNoButton.Location = new System.Drawing.Point(379, 14);
+            this.filterNoButton.Location = new System.Drawing.Point(474, 26);
+            this.filterNoButton.Margin = new System.Windows.Forms.Padding(4);
             this.filterNoButton.Name = "filterNoButton";
-            this.filterNoButton.Size = new System.Drawing.Size(110, 85);
+            this.filterNoButton.Size = new System.Drawing.Size(138, 106);
             this.filterNoButton.TabIndex = 5;
-            this.filterNoButton.Text = "Zrušit filtr";
+            this.filterNoButton.Text = "Close";
             this.filterNoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.filterNoButton.UseVisualStyleBackColor = true;
             this.filterNoButton.Visible = false;
@@ -177,36 +161,25 @@
             // 
             this.filterPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.filterPanel.Controls.Add(this.filterOK);
-            this.filterPanel.Controls.Add(this.label7);
             this.filterPanel.Controls.Add(this.filterComboBox);
-            this.filterPanel.Controls.Add(this.label4);
-            this.filterPanel.Controls.Add(this.filterNumericUpDown);
-            this.filterPanel.Controls.Add(this.filterTextBox);
             this.filterPanel.Controls.Add(this.label8);
-            this.filterPanel.Location = new System.Drawing.Point(495, 14);
+            this.filterPanel.Location = new System.Drawing.Point(619, 18);
+            this.filterPanel.Margin = new System.Windows.Forms.Padding(4);
             this.filterPanel.Name = "filterPanel";
-            this.filterPanel.Size = new System.Drawing.Size(474, 85);
+            this.filterPanel.Size = new System.Drawing.Size(592, 106);
             this.filterPanel.TabIndex = 4;
             this.filterPanel.Visible = false;
             // 
             // filterOK
             // 
-            this.filterOK.Location = new System.Drawing.Point(357, 42);
+            this.filterOK.Location = new System.Drawing.Point(198, 55);
+            this.filterOK.Margin = new System.Windows.Forms.Padding(4);
             this.filterOK.Name = "filterOK";
-            this.filterOK.Size = new System.Drawing.Size(99, 29);
+            this.filterOK.Size = new System.Drawing.Size(124, 36);
             this.filterOK.TabIndex = 24;
-            this.filterOK.Text = "Filtruj>";
+            this.filterOK.Text = "Filter";
             this.filterOK.UseVisualStyleBackColor = true;
             this.filterOK.Click += new System.EventHandler(this.filterOK_Click);
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(178, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 24);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Věk:";
             // 
             // filterComboBox
             // 
@@ -215,52 +188,34 @@
             "Vše",
             "Muž",
             "Žena"});
-            this.filterComboBox.Location = new System.Drawing.Point(254, 42);
+            this.filterComboBox.Location = new System.Drawing.Point(45, 55);
+            this.filterComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.filterComboBox.Name = "filterComboBox";
-            this.filterComboBox.Size = new System.Drawing.Size(97, 28);
+            this.filterComboBox.Size = new System.Drawing.Size(120, 33);
             this.filterComboBox.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(5, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 25);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Část jména nebo příjmení:";
-            // 
-            // filterNumericUpDown
-            // 
-            this.filterNumericUpDown.Location = new System.Drawing.Point(177, 42);
-            this.filterNumericUpDown.Name = "filterNumericUpDown";
-            this.filterNumericUpDown.Size = new System.Drawing.Size(71, 27);
-            this.filterNumericUpDown.TabIndex = 20;
-            // 
-            // filterTextBox
-            // 
-            this.filterTextBox.Location = new System.Drawing.Point(19, 42);
-            this.filterTextBox.Name = "filterTextBox";
-            this.filterTextBox.Size = new System.Drawing.Size(152, 27);
-            this.filterTextBox.TabIndex = 18;
+            this.filterComboBox.SelectedIndexChanged += new System.EventHandler(this.filterComboBox_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(259, 15);
+            this.label8.Location = new System.Drawing.Point(45, 18);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 25);
+            this.label8.Size = new System.Drawing.Size(115, 31);
             this.label8.TabIndex = 19;
-            this.label8.Text = "Pohlaví:";
+            this.label8.Text = "Group";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // filterButton
             // 
             this.filterButton.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.filterButton.Image = ((System.Drawing.Image)(resources.GetObject("filterButton.Image")));
-            this.filterButton.Location = new System.Drawing.Point(379, 14);
+            this.filterButton.Location = new System.Drawing.Point(474, 18);
+            this.filterButton.Margin = new System.Windows.Forms.Padding(4);
             this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(110, 85);
+            this.filterButton.Size = new System.Drawing.Size(138, 106);
             this.filterButton.TabIndex = 3;
-            this.filterButton.Text = "Filtrovat";
+            this.filterButton.Text = "Filter by Group";
             this.filterButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.filterButton.UseVisualStyleBackColor = true;
             this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
@@ -269,11 +224,12 @@
             // 
             this.upravitButton.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.upravitButton.Image = ((System.Drawing.Image)(resources.GetObject("upravitButton.Image")));
-            this.upravitButton.Location = new System.Drawing.Point(254, 14);
+            this.upravitButton.Location = new System.Drawing.Point(318, 18);
+            this.upravitButton.Margin = new System.Windows.Forms.Padding(4);
             this.upravitButton.Name = "upravitButton";
-            this.upravitButton.Size = new System.Drawing.Size(110, 85);
+            this.upravitButton.Size = new System.Drawing.Size(138, 106);
             this.upravitButton.TabIndex = 2;
-            this.upravitButton.Text = "Editovat osobu";
+            this.upravitButton.Text = "Edit Student";
             this.upravitButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.upravitButton.UseVisualStyleBackColor = true;
             this.upravitButton.Click += new System.EventHandler(this.upravitButton_Click);
@@ -282,11 +238,12 @@
             // 
             this.odebratButton.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.odebratButton.Image = ((System.Drawing.Image)(resources.GetObject("odebratButton.Image")));
-            this.odebratButton.Location = new System.Drawing.Point(131, 14);
+            this.odebratButton.Location = new System.Drawing.Point(164, 18);
+            this.odebratButton.Margin = new System.Windows.Forms.Padding(4);
             this.odebratButton.Name = "odebratButton";
-            this.odebratButton.Size = new System.Drawing.Size(110, 85);
+            this.odebratButton.Size = new System.Drawing.Size(138, 106);
             this.odebratButton.TabIndex = 1;
-            this.odebratButton.Text = "Smazat osobu";
+            this.odebratButton.Text = "Delete Student";
             this.odebratButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.odebratButton.UseVisualStyleBackColor = true;
             this.odebratButton.Click += new System.EventHandler(this.odebratButton_Click);
@@ -295,11 +252,12 @@
             // 
             this.pridatButton.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pridatButton.Image = ((System.Drawing.Image)(resources.GetObject("pridatButton.Image")));
-            this.pridatButton.Location = new System.Drawing.Point(11, 14);
+            this.pridatButton.Location = new System.Drawing.Point(14, 18);
+            this.pridatButton.Margin = new System.Windows.Forms.Padding(4);
             this.pridatButton.Name = "pridatButton";
-            this.pridatButton.Size = new System.Drawing.Size(110, 85);
+            this.pridatButton.Size = new System.Drawing.Size(138, 106);
             this.pridatButton.TabIndex = 0;
-            this.pridatButton.Text = "Přidat osobu";
+            this.pridatButton.Text = "Add Student";
             this.pridatButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.pridatButton.UseVisualStyleBackColor = true;
             this.pridatButton.Click += new System.EventHandler(this.pridatButton_Click);
@@ -309,10 +267,11 @@
             this.osobyListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.osobyListBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.osobyListBox.FormattingEnabled = true;
-            this.osobyListBox.ItemHeight = 23;
+            this.osobyListBox.ItemHeight = 28;
             this.osobyListBox.Location = new System.Drawing.Point(0, 0);
+            this.osobyListBox.Margin = new System.Windows.Forms.Padding(4);
             this.osobyListBox.Name = "osobyListBox";
-            this.osobyListBox.Size = new System.Drawing.Size(289, 512);
+            this.osobyListBox.Size = new System.Drawing.Size(360, 642);
             this.osobyListBox.TabIndex = 2;
             this.osobyListBox.SelectedIndexChanged += new System.EventHandler(this.osobyListBox_SelectedIndexChanged);
             // 
@@ -324,168 +283,147 @@
             this.detailyPanel.Controls.Add(this.datumNarozeniLabel);
             this.detailyPanel.Controls.Add(this.prijmeniLabel);
             this.detailyPanel.Controls.Add(this.jmenoLabel);
-            this.detailyPanel.Controls.Add(this.groupBox1);
             this.detailyPanel.Controls.Add(this.label6);
             this.detailyPanel.Controls.Add(this.label5);
-            this.detailyPanel.Controls.Add(this.fotoPictureBox);
             this.detailyPanel.Controls.Add(this.label3);
             this.detailyPanel.Controls.Add(this.label2);
             this.detailyPanel.Controls.Add(this.label1);
             this.detailyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.detailyPanel.Location = new System.Drawing.Point(0, 141);
+            this.detailyPanel.Location = new System.Drawing.Point(0, 174);
+            this.detailyPanel.Margin = new System.Windows.Forms.Padding(4);
             this.detailyPanel.Name = "detailyPanel";
-            this.detailyPanel.Size = new System.Drawing.Size(982, 512);
+            this.detailyPanel.Size = new System.Drawing.Size(1228, 642);
             this.detailyPanel.TabIndex = 3;
             // 
             // vekLabel
             // 
             this.vekLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vekLabel.Location = new System.Drawing.Point(471, 104);
+            this.vekLabel.Location = new System.Drawing.Point(589, 130);
+            this.vekLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.vekLabel.Name = "vekLabel";
-            this.vekLabel.Size = new System.Drawing.Size(92, 25);
+            this.vekLabel.Size = new System.Drawing.Size(115, 31);
             this.vekLabel.TabIndex = 14;
             this.vekLabel.Text = "Věk:";
+            this.vekLabel.Click += new System.EventHandler(this.vekLabel_Click);
             // 
             // pohlaviLabel
             // 
             this.pohlaviLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pohlaviLabel.Location = new System.Drawing.Point(471, 143);
+            this.pohlaviLabel.Location = new System.Drawing.Point(589, 179);
+            this.pohlaviLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pohlaviLabel.Name = "pohlaviLabel";
-            this.pohlaviLabel.Size = new System.Drawing.Size(92, 25);
+            this.pohlaviLabel.Size = new System.Drawing.Size(115, 31);
             this.pohlaviLabel.TabIndex = 13;
             this.pohlaviLabel.Text = "Pohlaví:";
             // 
             // datumNarozeniLabel
             // 
             this.datumNarozeniLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.datumNarozeniLabel.Location = new System.Drawing.Point(471, 184);
+            this.datumNarozeniLabel.Location = new System.Drawing.Point(589, 230);
+            this.datumNarozeniLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.datumNarozeniLabel.Name = "datumNarozeniLabel";
-            this.datumNarozeniLabel.Size = new System.Drawing.Size(92, 25);
+            this.datumNarozeniLabel.Size = new System.Drawing.Size(115, 31);
             this.datumNarozeniLabel.TabIndex = 11;
             this.datumNarozeniLabel.Text = "Dat";
             // 
             // prijmeniLabel
             // 
             this.prijmeniLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.prijmeniLabel.Location = new System.Drawing.Point(471, 63);
+            this.prijmeniLabel.Location = new System.Drawing.Point(589, 79);
+            this.prijmeniLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.prijmeniLabel.Name = "prijmeniLabel";
-            this.prijmeniLabel.Size = new System.Drawing.Size(69, 25);
+            this.prijmeniLabel.Size = new System.Drawing.Size(86, 31);
             this.prijmeniLabel.TabIndex = 10;
             this.prijmeniLabel.Text = "Příjmení";
             // 
             // jmenoLabel
             // 
             this.jmenoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.jmenoLabel.Location = new System.Drawing.Point(471, 27);
+            this.jmenoLabel.Location = new System.Drawing.Point(589, 34);
+            this.jmenoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.jmenoLabel.Name = "jmenoLabel";
-            this.jmenoLabel.Size = new System.Drawing.Size(62, 25);
+            this.jmenoLabel.Size = new System.Drawing.Size(78, 31);
             this.jmenoLabel.TabIndex = 9;
             this.jmenoLabel.Text = "Jméno:";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.poznamkalabel);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(342, 287);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(562, 162);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Poznámka";
-            // 
-            // poznamkalabel
-            // 
-            this.poznamkalabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.poznamkalabel.Location = new System.Drawing.Point(6, 23);
-            this.poznamkalabel.Name = "poznamkalabel";
-            this.poznamkalabel.Size = new System.Drawing.Size(529, 130);
-            this.poznamkalabel.TabIndex = 15;
-            this.poznamkalabel.Text = "Jméno:";
-            this.poznamkalabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(342, 104);
+            this.label6.Location = new System.Drawing.Point(428, 130);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 25);
+            this.label6.Size = new System.Drawing.Size(115, 31);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Věk:";
+            this.label6.Text = "ID";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(342, 143);
+            this.label5.Location = new System.Drawing.Point(428, 179);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 25);
+            this.label5.Size = new System.Drawing.Size(115, 31);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Pohlaví:";
-            // 
-            // fotoPictureBox
-            // 
-            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fotoPictureBox.Location = new System.Drawing.Point(710, 27);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(194, 212);
-            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoPictureBox.TabIndex = 3;
-            this.fotoPictureBox.TabStop = false;
+            this.label5.Text = "Group";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(342, 184);
+            this.label3.Location = new System.Drawing.Point(428, 230);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 25);
+            this.label3.Size = new System.Drawing.Size(154, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Datum narození:";
+            this.label3.Text = "Email";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(342, 63);
+            this.label2.Location = new System.Drawing.Point(428, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 25);
+            this.label2.Size = new System.Drawing.Size(86, 31);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Příjmení";
+            this.label2.Text = "Last Name";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(342, 27);
+            this.label1.Location = new System.Drawing.Point(428, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 25);
+            this.label1.Size = new System.Drawing.Size(78, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Jméno:";
+            this.label1.Text = "First Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // osobyPanel
             // 
             this.osobyPanel.Controls.Add(this.osobyListBox);
             this.osobyPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.osobyPanel.Location = new System.Drawing.Point(0, 141);
+            this.osobyPanel.Location = new System.Drawing.Point(0, 174);
+            this.osobyPanel.Margin = new System.Windows.Forms.Padding(4);
             this.osobyPanel.Name = "osobyPanel";
-            this.osobyPanel.Size = new System.Drawing.Size(289, 512);
+            this.osobyPanel.Size = new System.Drawing.Size(361, 642);
             this.osobyPanel.TabIndex = 4;
             // 
             // FormHlavni
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 653);
+            this.ClientSize = new System.Drawing.Size(1228, 816);
             this.Controls.Add(this.osobyPanel);
             this.Controls.Add(this.detailyPanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormHlavni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Databáze osob";
+            this.Text = "Muyiwa Project";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHlavni_FormClosing);
             this.Load += new System.EventHandler(this.FormHlavni_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.menuPanel.ResumeLayout(false);
             this.filterPanel.ResumeLayout(false);
-            this.filterPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.filterNumericUpDown)).EndInit();
             this.detailyPanel.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.osobyPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -503,10 +441,8 @@
         private ListBox osobyListBox;
         private Panel detailyPanel;
         private Panel osobyPanel;
-        private GroupBox groupBox1;
         private Label label6;
         private Label label5;
-        private PictureBox fotoPictureBox;
         private Label label3;
         private Label label2;
         private Label label1;
@@ -516,8 +452,6 @@
         private Label datumNarozeniLabel;
         private Label prijmeniLabel;
         private Label jmenoLabel;
-        private Label poznamkalabel;
-        private ToolStripMenuItem infoToolStripMenuItem;
         private ToolStripMenuItem konecToolStripMenuItem;
         private ToolStripMenuItem seřaditToolStripMenuItem;
         private ToolStripMenuItem podleJménaToolStripMenuItem;
@@ -526,11 +460,7 @@
         private Button filterButton;
         private Panel filterPanel;
         private Button filterOK;
-        private Label label7;
         private ComboBox filterComboBox;
-        private Label label4;
-        private NumericUpDown filterNumericUpDown;
-        private TextBox filterTextBox;
         private Label label8;
         private Button filterNoButton;
     }

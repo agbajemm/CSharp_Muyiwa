@@ -61,18 +61,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="filterNoButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAYxJREFUaEPt
-        mUtOxDAQRAML4JYIVnACtuyAC8CCzzEQV2HP5xQwVI3UUit4nHbc/ozkJ71FQuxUxZmZoEyDwWDQFUfw
-        Dn7BTSM/4S1klmQ4MDRpC5klmZZXfu43TEZP0IqsDFmDncjKkDXYiawMWYN74BdKgWPu2DfeoRR4hXtX
-        4hRKgVIlzuETPNxu2TiA9/Byu7XAFdQl3uAJ9IDhfyDnfYGWEgz/ADmGt3jTEo9Qz/sMYyX4Nx6jx3AO
-        EyVKyK2g5921EvrKi0uF/9GqhEt4oXYJ1/BCiRIMNL+/uR3alxVeqLUSWrfwQs0S7uEF7xKhe55afydW
-        cQ31yfiLvYZd4cWiJeYrkQqDhT6woX3FSugTpRD7qgx9JoqthD6JlVh4oVoJfQILlvBClRJ6cgtVH+Ys
-        6IktnEF5nF4KL+iV4OP0BXQjtQDh/wS8iim3Ao/lGI51ZU2BrhgFWmMpYDmmGZZwlmOaYQlnOaYZfBmh
-        A8b8gN2R8kLkBnYHXwOxRGwlsl4ZDQaDQc9M0x8zh33qadSjlAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="filterButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

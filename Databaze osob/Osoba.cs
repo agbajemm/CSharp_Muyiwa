@@ -13,11 +13,11 @@ namespace Databaze_osob
     {
         public string Jmeno { get; set; }
         public string Prijmeni { get; set; }
-        public DateTime DatumNarozeni { get; set; }
+        //public DateTime DatumNarozeni { get; set; }
+
+        public int ID { get; set; }
 
         public bool Pohlavi { get; set; }   //true -muž/ false -žena
-
-        public string Poznamka { get; set; }
 
         [XmlIgnore]
         public Image Foto
@@ -45,45 +45,25 @@ namespace Databaze_osob
 
         public byte[] FotoByte { get; set; }// obrazek zaspsaný v poli bytu, aby šel serializovat
 
-        [XmlIgnore]
-        public int Vek {
-            get
-            {                     
-                DateTime dnes = DateTime.Today;
-                int vek = dnes.Year - DatumNarozeni.Year;
-                if (dnes < DatumNarozeni.AddYears(vek))
-                    vek--;
-                return vek;
-            }
-            
-           
-        
-        
-        }
 
 
 
-        public Osoba(DateTime datumNarozeni, string jmeno, string prijmeni, bool pohlavi, string poznamka)
+        public Osoba(int id, string jmeno, string prijmeni, bool pohlavi)
         {
             Jmeno = jmeno;
             Prijmeni = prijmeni;
 
-            DatumNarozeni = datumNarozeni;
+            ID = id;
             Pohlavi = pohlavi;
-            Poznamka = poznamka;
 
         }
 
 
         public Osoba() { }//prázdný konstruktor aby fungovala serializace
-
-
         public override string ToString()
         {
-            return String.Format($"{Jmeno} {Prijmeni} - {DatumNarozeni.Year}");
+            return String.Format($"{Jmeno} {Prijmeni} - {ID}");
         }
-
-
 
 
     }

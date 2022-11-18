@@ -1,0 +1,20 @@
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\CSharp Muyiwa.exe
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\CSharp Muyiwa.deps.json
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\CSharp Muyiwa.runtimeconfig.json
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\CSharp Muyiwa.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\CSharp Muyiwa.pdb
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.csproj.AssemblyReference.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.editForm.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.FormHlavni.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.pridatForm.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.Properties.Resources.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.csproj.GenerateResource.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.AssemblyInfoInputs.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.AssemblyInfo.cs
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.csproj.CoreCompileInputs.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\refint\CSharp Muyiwa.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.pdb
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.genruntimeconfig.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\ref\CSharp Muyiwa.dll

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\Databaze osob.csproj": {}
+    "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\CSharp Muyiwa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\Databaze osob.csproj": {
+    "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\CSharp Muyiwa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\Databaze osob.csproj",
-        "projectName": "Databaze osob",
-        "projectPath": "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\Databaze osob.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\CSharp Muyiwa.csproj",
+        "projectName": "CSharp Muyiwa",
+        "projectPath": "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\CSharp Muyiwa.csproj",
         "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Muhammed\\source\\repos\\CSharp_Muyiwa\\Databaze osob\\obj\\",
         "projectStyle": "PackageReference",

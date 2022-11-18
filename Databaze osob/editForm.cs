@@ -29,22 +29,12 @@ namespace Databaze_osob
         private void ulozOsobuButton_Click(object sender, EventArgs e)
         {
             try 
-            { 
+            {
 
-            osoba.DatumNarozeni = datumTimePicker.Value;
+            osoba.ID = int.Parse(textBox1.Text);
             osoba.Jmeno = jmenoTextBox.Text;
             osoba.Prijmeni = prijmeniTextBox.Text;
-            osoba.Poznamka = poznamkaTextBox.Text;
             osoba.Pohlavi = muzRadioButton.Checked;
-
-            if (fotoPictureBox.Image != null)
-            {
-                using (var stream = new MemoryStream())
-                {
-                    fotoPictureBox.Image.Save(stream, fotoPictureBox.Image.RawFormat);
-                    osoba.FotoByte = stream.ToArray();
-                }
-            }
 
             this.Close();
 
@@ -58,43 +48,23 @@ namespace Databaze_osob
         //nahrání hodnot po loadu editForm
         private void editForm_Load(object sender, EventArgs e)
         {
-            datumTimePicker.Value = osoba.DatumNarozeni;
+            osoba.ID = int.Parse(textBox1.Text);
             jmenoTextBox.Text = osoba.Jmeno;
             prijmeniTextBox.Text = osoba.Prijmeni;
-            poznamkaTextBox.Text = osoba.Poznamka;
             
             if (osoba.Pohlavi) muzRadioButton.Checked = true;
             else zenaRadioButton.Checked = true;
 
-            fotoPictureBox.Image = osoba.Foto;
         }
 
-        //nahraje nové foto Osoby
-        private void nahratFotoButton_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                using (OpenFileDialog ofd = new OpenFileDialog())
-                {
 
-                    ofd.Filter = "obrazky |*.bmp;*.jpg;*.jpeg;*.png";
+        }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
-                    if (ofd.ShowDialog() == DialogResult.OK)
-                    {
-
-                        var fs = ofd.OpenFile();
-                        fotoPictureBox.Image = Image.FromStream(fs);
-
-
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Nastala chyba při nahrání fotky osoby. Chyba: {ex.Message}");
-            }
         }
     }
 }

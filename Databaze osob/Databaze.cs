@@ -95,7 +95,7 @@ namespace Databaze_osob
             if (podleCeho == 2)
                 Data = Data.OrderBy(a => a.Prijmeni).ToList();
             if (podleCeho == 3)
-                Data = Data.OrderBy(a => a.DatumNarozeni).ToList();
+                Data = Data.OrderBy(a => a.ID).ToList();
 
         }
 
@@ -107,20 +107,13 @@ namespace Databaze_osob
         /// <param name="jmeno"></param>
         /// <param name="vek"></param>
         /// <param name="pohlavi"></param>
-        public void Filtruj(string jmeno, int vek, string pohlavi)
+        public void Filtruj(string pohlavi)
         {
 
             List<Osoba> filtrovane = FiltrovanaData.ToList();
 
-            if (jmeno != null)  // když je zadán text tak prohledá jmeno i příjmení jestli ho obsahuje
-                filtrovane = filtrovane.FindAll(a => (a.Jmeno.Contains(jmeno) || a.Prijmeni.Contains(jmeno) || (a.Jmeno + " " + a.Prijmeni) == jmeno));
-
             if (pohlavi != "Vše")   //když není zadáno u pohlaví vše vyfiltruje pohlaví podle zadání
                 filtrovane = filtrovane.FindAll(a => (a.Pohlavi == (pohlavi == "Muž" ? true : false)));
-
-            if (vek > 0)    //když je věk > 0 najde osoby zadaného věku  
-                filtrovane = filtrovane.FindAll(a => (a.Vek == vek));
-
 
             FiltrovanaData = filtrovane.ToArray();
 

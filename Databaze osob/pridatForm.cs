@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
+
+using Microsoft.VisualBasic.FileIO;
 
 namespace Databaze_osob
 {
@@ -33,22 +37,11 @@ namespace Databaze_osob
             {
                 //vytvoří Osobu ze zadaných udajů
                 Osoba novaOsoba = new Osoba(
-                datumTimePicker.Value,
+                int.Parse(textBox1.Text),
                 jmenoTextBox.Text,
                 prijmeniTextBox.Text,
-                muzRadioButton.Checked,
-                poznamkaTextBox.Text
+                muzRadioButton.Checked
              );
-
-                //pokud je obrázek nahraný, zapíše se jako pole bytu
-                if (fotoPictureBox.Image != null)
-                {
-                    using (var stream = new MemoryStream())
-                    {
-                        fotoPictureBox.Image.Save(stream, fotoPictureBox.Image.RawFormat);
-                        novaOsoba.FotoByte = stream.ToArray();
-                    }
-                }
 
                 //prida Osobu do databaze
                 databaze.PridejZaznam(novaOsoba);
@@ -61,34 +54,151 @@ namespace Databaze_osob
 
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
 
-        //nahraje foto, zatím jen do pictureboxu, Osobě se přidá až pak jako pole bytu
-        private void nahratFotoButton_Click(object sender, EventArgs e)
+        }
+
+        private void datumTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btbrowse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btbrowse_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new()
+            {
+                // To list only csv files, we need to add this filter
+                Filter = "|*.csv"
+            };
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                csvPath.Text = openFileDialog.FileName;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             try
             {
-                using (OpenFileDialog ofd = new OpenFileDialog())
+                csvGridView.DataSource = GetDataTableFromCSVFile(csvPath.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Import CSV File", MessageBoxButtons.OK,
+  MessageBoxIcon.Error);
+            }
+        }
+        private static DataTable GetDataTableFromCSVFile(string csvfilePath)
+        {
+            DataTable csvData = new();
+            using (TextFieldParser csvReader = new(csvfilePath))
+            {
+                csvReader.SetDelimiters(new string[] { "," });
+                csvReader.HasFieldsEnclosedInQuotes = true;
+
+                //Read columns from CSV file, remove this line if columns not exits  
+                string[] colFields = csvReader.ReadFields();
+
+                for (int i = 0; i < colFields.Length; i++)
                 {
-
-                    ofd.Filter = "obrazky |*.bmp;*.jpg;*.jpeg;*.png";
-
-
-                    if (ofd.ShowDialog() == DialogResult.OK)
+                    string column = colFields[i];
+                    DataColumn datecolumn = new(column)
                     {
+                        AllowDBNull = true
+                    };
+                    csvData.Columns.Add(datecolumn);
+                }
 
-                        var fs = ofd.OpenFile();
-                        fotoPictureBox.Image = Image.FromStream(fs);
+                while (!csvReader.EndOfData)
+                {
+                    string[] fieldData = csvReader.ReadFields();
+                    //Making empty value as null
 
-
+                    if (fieldData is not null)
+                    {
+                        for (int i = 0; i < fieldData.Length; i++)
+                        {
+                            if (fieldData[i] == "")
+                            {
+                                fieldData[i] = null;
+                            }
+                        }
+                        csvData.Rows.Add(fieldData);
                     }
+                }
+            }
+            return csvData;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dtItem = (DataTable)(csvGridView.DataSource);
+                string ID, First_Name, Last_Name;
+                bool Group_id;
+                string InsertItemQry = "";
+                int count = 0;
+                foreach (DataRow dr in dtItem.Rows)
+                {
+                    ID = Convert.ToString(dr["ID"]);
+                    First_Name = Convert.ToString(dr["FirstName"]);
+                    Last_Name = Convert.ToString(dr["LastName"]);
+                    Group_id = true;
+                    if (ID != "" && First_Name != "" && Last_Name != "")
+                    {
+                        try
+                        {
+                            Osoba novaOsoba = new Osoba(
+                            int.Parse(ID),
+                            First_Name,
+                            Last_Name,
+                            Group_id
+                         );
+
+                            //prida Osobu do databaze
+                            databaze.PridejZaznam(novaOsoba);
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error {ex.Message}");
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nastala chyba při nahrání fotky osoby. Chyba: {ex.Message}");
+                MessageBox.Show("Exception " + ex);
             }
-
         }
     }
 }

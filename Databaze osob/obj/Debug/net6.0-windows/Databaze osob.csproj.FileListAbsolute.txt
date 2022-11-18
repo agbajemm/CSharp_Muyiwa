@@ -56,3 +56,43 @@ C:\Projekty\Databaze osob\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-wi
 C:\Projekty\Databaze osob\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.pdb
 C:\Projekty\Databaze osob\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.genruntimeconfig.cache
 C:\Projekty\Databaze osob\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\ref\Databaze osob.dll
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.exe
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.deps.json
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.runtimeconfig.json
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.dll
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.pdb
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.csproj.AssemblyReference.cache
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.editForm.resources
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.FormHlavni.resources
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.pridatForm.resources
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.Properties.Resources.resources
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.csproj.GenerateResource.cache
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.AssemblyInfoInputs.cache
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.AssemblyInfo.cs
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.csproj.CoreCompileInputs.cache
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.dll
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\refint\Databaze osob.dll
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.pdb
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.genruntimeconfig.cache
+C:\Users\Muhammed\Source\Repos\CSharp_Databaze_Osob\Databaze osob\obj\Debug\net6.0-windows\ref\Databaze osob.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.exe
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.deps.json
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.runtimeconfig.json
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\Databaze osob.pdb
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.csproj.AssemblyReference.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.editForm.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.FormHlavni.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.pridatForm.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.Properties.Resources.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.csproj.GenerateResource.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.AssemblyInfoInputs.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.AssemblyInfo.cs
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.csproj.CoreCompileInputs.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\refint\Databaze osob.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.pdb
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze osob.genruntimeconfig.cache
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\ref\Databaze osob.dll
