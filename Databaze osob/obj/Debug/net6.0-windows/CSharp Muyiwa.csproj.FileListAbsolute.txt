@@ -5,8 +5,6 @@ C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-wind
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\bin\Debug\net6.0-windows\CSharp Muyiwa.pdb
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.csproj.AssemblyReference.cache
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.editForm.resources
-C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.FormHlavni.resources
-C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.pridatForm.resources
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.Properties.Resources.resources
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.csproj.GenerateResource.cache
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.GeneratedMSBuildEditorConfig.editorconfig
@@ -18,3 +16,7 @@ C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-wind
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.pdb
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\CSharp Muyiwa.genruntimeconfig.cache
 C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\ref\CSharp Muyiwa.dll
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.GroupF.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.addForm.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.FormMain.resources
+C:\Users\Muhammed\source\repos\CSharp_Muyiwa\Databaze osob\obj\Debug\net6.0-windows\Databaze_osob.Form2.resources

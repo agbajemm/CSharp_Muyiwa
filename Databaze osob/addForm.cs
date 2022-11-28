@@ -15,41 +15,43 @@ using Microsoft.VisualBasic.FileIO;
 namespace Databaze_osob
 {
     /// <summary>
-    /// formulář na přidání osoby
+    /// form to add a person
     /// </summary>
-    public partial class pridatForm : Form
+    public partial class addForm : Form
     {
 
-        Databaze databaze;
-        Osoba novaOsoba;
-        public pridatForm(Databaze databaze)
+        Database database;
+        Student student;
+        Group grp;
+        public addForm(Database database)
         {
             InitializeComponent();
-            this.databaze = databaze;
+            this.database = database;
         }
 
 
-        // tlačítko uložit novou osobu, obrazek převede na pole bytu
-        private void ulozOsobuButton_Click(object sender, EventArgs e)
+        // button to save a new student
+        private void saveButton_Click(object sender, EventArgs e)
         {
 
             try
             {
-                //vytvoří Osobu ze zadaných udajů
-                Osoba novaOsoba = new Osoba(
+                //creates a Student from the entered data
+                Student student = new Student(
                 int.Parse(textBox1.Text),
-                jmenoTextBox.Text,
-                prijmeniTextBox.Text,
-                muzRadioButton.Checked
+                firstnameTextBox.Text,
+                lastnameTextBox.Text,
+                textBox2.Text,
+                int.Parse(textBox3.Text)
              );
 
-                //prida Osobu do databaze
-                databaze.PridejZaznam(novaOsoba);
+                //adds the Student to the database
+                database.AddStudent(student);
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nastala chyba při uložení osoby. Chyba: {ex.Message}");
+                MessageBox.Show($"An error occurred while saving the person. Error: {ex.Message}");
             }
 
         }
@@ -163,8 +165,8 @@ namespace Databaze_osob
             try
             {
                 DataTable dtItem = (DataTable)(csvGridView.DataSource);
-                string ID, First_Name, Last_Name;
-                bool Group_id;
+                string ID, First_Name, Last_Name, Email;
+                int Group_id = '0';
                 string InsertItemQry = "";
                 int count = 0;
                 foreach (DataRow dr in dtItem.Rows)
@@ -172,20 +174,21 @@ namespace Databaze_osob
                     ID = Convert.ToString(dr["ID"]);
                     First_Name = Convert.ToString(dr["FirstName"]);
                     Last_Name = Convert.ToString(dr["LastName"]);
-                    Group_id = true;
-                    if (ID != "" && First_Name != "" && Last_Name != "")
+                    Email = Convert.ToString(dr["Email"]);
+                    if (ID != "" && First_Name != "" && Last_Name != "" && Email != "")
                     {
                         try
                         {
-                            Osoba novaOsoba = new Osoba(
+                            Student student = new Student(
                             int.Parse(ID),
                             First_Name,
                             Last_Name,
+                            Email,
                             Group_id
                          );
 
-                            //prida Osobu do databaze
-                            databaze.PridejZaznam(novaOsoba);
+                            //Add student(s) to database
+                            database.AddStudent(student);
                             this.Close();
                         }
                         catch (Exception ex)
@@ -200,5 +203,26 @@ namespace Databaze_osob
                 MessageBox.Show("Exception " + ex);
             }
         }
+
+        private void lastnameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

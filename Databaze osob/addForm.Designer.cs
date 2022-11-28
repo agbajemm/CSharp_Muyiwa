@@ -1,6 +1,6 @@
 ﻿namespace Databaze_osob
 {
-    partial class pridatForm
+    partial class addForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.jmenoTextBox = new System.Windows.Forms.TextBox();
-            this.prijmeniTextBox = new System.Windows.Forms.TextBox();
-            this.ulozOsobuButton = new System.Windows.Forms.Button();
-            this.muzRadioButton = new System.Windows.Forms.RadioButton();
-            this.zenaRadioButton = new System.Windows.Forms.RadioButton();
+            this.firstnameTextBox = new System.Windows.Forms.TextBox();
+            this.lastnameTextBox = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btbrowse = new System.Windows.Forms.Button();
@@ -44,6 +42,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.csvGridView = new System.Windows.Forms.DataGridView();
             this.csvPath = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.csvGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(94, 176);
+            this.label2.Location = new System.Drawing.Point(94, 145);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 31);
@@ -77,7 +78,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(94, 109);
+            this.label1.Location = new System.Drawing.Point(94, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 31);
@@ -85,58 +86,33 @@
             this.label1.Text = "First Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // jmenoTextBox
+            // firstnameTextBox
             // 
-            this.jmenoTextBox.Location = new System.Drawing.Point(256, 109);
-            this.jmenoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.jmenoTextBox.Name = "jmenoTextBox";
-            this.jmenoTextBox.Size = new System.Drawing.Size(279, 31);
-            this.jmenoTextBox.TabIndex = 15;
+            this.firstnameTextBox.Location = new System.Drawing.Point(256, 94);
+            this.firstnameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.firstnameTextBox.Name = "firstnameTextBox";
+            this.firstnameTextBox.Size = new System.Drawing.Size(279, 31);
+            this.firstnameTextBox.TabIndex = 15;
             // 
-            // prijmeniTextBox
+            // lastnameTextBox
             // 
-            this.prijmeniTextBox.Location = new System.Drawing.Point(256, 176);
-            this.prijmeniTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.prijmeniTextBox.Name = "prijmeniTextBox";
-            this.prijmeniTextBox.Size = new System.Drawing.Size(279, 31);
-            this.prijmeniTextBox.TabIndex = 16;
+            this.lastnameTextBox.Location = new System.Drawing.Point(256, 145);
+            this.lastnameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.lastnameTextBox.Name = "lastnameTextBox";
+            this.lastnameTextBox.Size = new System.Drawing.Size(279, 31);
+            this.lastnameTextBox.TabIndex = 16;
+            this.lastnameTextBox.TextChanged += new System.EventHandler(this.lastnameTextBox_TextChanged);
             // 
-            // ulozOsobuButton
+            // saveButton
             // 
-            this.ulozOsobuButton.Location = new System.Drawing.Point(336, 295);
-            this.ulozOsobuButton.Margin = new System.Windows.Forms.Padding(4);
-            this.ulozOsobuButton.Name = "ulozOsobuButton";
-            this.ulozOsobuButton.Size = new System.Drawing.Size(199, 55);
-            this.ulozOsobuButton.TabIndex = 20;
-            this.ulozOsobuButton.Text = "Add Student";
-            this.ulozOsobuButton.UseVisualStyleBackColor = true;
-            this.ulozOsobuButton.Click += new System.EventHandler(this.ulozOsobuButton_Click);
-            // 
-            // muzRadioButton
-            // 
-            this.muzRadioButton.AutoSize = true;
-            this.muzRadioButton.Checked = true;
-            this.muzRadioButton.Location = new System.Drawing.Point(282, 249);
-            this.muzRadioButton.Margin = new System.Windows.Forms.Padding(4);
-            this.muzRadioButton.Name = "muzRadioButton";
-            this.muzRadioButton.Size = new System.Drawing.Size(71, 29);
-            this.muzRadioButton.TabIndex = 22;
-            this.muzRadioButton.TabStop = true;
-            this.muzRadioButton.Text = "Muž";
-            this.muzRadioButton.UseVisualStyleBackColor = true;
-            this.muzRadioButton.Visible = false;
-            // 
-            // zenaRadioButton
-            // 
-            this.zenaRadioButton.AutoSize = true;
-            this.zenaRadioButton.Location = new System.Drawing.Point(402, 249);
-            this.zenaRadioButton.Margin = new System.Windows.Forms.Padding(4);
-            this.zenaRadioButton.Name = "zenaRadioButton";
-            this.zenaRadioButton.Size = new System.Drawing.Size(75, 29);
-            this.zenaRadioButton.TabIndex = 23;
-            this.zenaRadioButton.Text = "Žena";
-            this.zenaRadioButton.UseVisualStyleBackColor = true;
-            this.zenaRadioButton.Visible = false;
+            this.saveButton.Location = new System.Drawing.Point(336, 295);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(199, 55);
+            this.saveButton.TabIndex = 20;
+            this.saveButton.Text = "Add Student";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // textBox1
             // 
@@ -202,11 +178,37 @@
             this.csvPath.Size = new System.Drawing.Size(292, 31);
             this.csvPath.TabIndex = 33;
             // 
-            // pridatForm
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(256, 189);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(279, 31);
+            this.textBox2.TabIndex = 34;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(94, 195);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 25);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Email";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(255, 251);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(150, 31);
+            this.textBox3.TabIndex = 36;
+            // 
+            // addForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 648);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.csvPath);
             this.Controls.Add(this.csvGridView);
             this.Controls.Add(this.button2);
@@ -214,19 +216,18 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btbrowse);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.zenaRadioButton);
-            this.Controls.Add(this.muzRadioButton);
-            this.Controls.Add(this.ulozOsobuButton);
-            this.Controls.Add(this.prijmeniTextBox);
-            this.Controls.Add(this.jmenoTextBox);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.lastnameTextBox);
+            this.Controls.Add(this.firstnameTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "pridatForm";
+            this.Name = "addForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Student";
+            this.Load += new System.EventHandler(this.addForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.csvGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,11 +240,9 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox jmenoTextBox;
-        private TextBox prijmeniTextBox;
-        private Button ulozOsobuButton;
-        private RadioButton muzRadioButton;
-        private RadioButton zenaRadioButton;
+        private TextBox firstnameTextBox;
+        private TextBox lastnameTextBox;
+        private Button saveButton;
         private TextBox textBox1;
         private Label label4;
         private Button btbrowse;
@@ -251,5 +250,8 @@
         private Button button2;
         private DataGridView csvGridView;
         private TextBox csvPath;
+        private TextBox textBox2;
+        private Label label6;
+        private TextBox textBox3;
     }
 }

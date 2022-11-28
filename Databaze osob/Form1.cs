@@ -1,41 +1,39 @@
-using Microsoft.VisualBasic.Logging;
+ï»¿using Microsoft.VisualBasic.Logging;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-
-// použité free ikony - https://www.iconfinder.com/
-// fotky neexistujících osob - https://thispersondoesnotexist.com/
-// texty - http://www.lorem-ipsum.cz/
 
 namespace Databaze_osob
 {
-    public partial class FormHlavni : Form
+    public partial class FormMain : Form
     {
-        Databaze databaze = new Databaze();
-        pridatForm pridatF;     // formuláø Pøidání Osoby
-        editForm editF;         // formuláø Editace Osoby
-        public FormHlavni()
+        Database database = new Database();
+        addForm addF;     // Add Student form
+        editForm editF;         // form Edit Student
+        GroupF GroupF;      // form Add Group
+        public Group group;
+        public FormMain()
         {
             InitializeComponent();
 
-            //a pøipojí listbox k databazi
-            osobyListBox.DataSource = databaze.Data;
+            //connects the listbox to the database
+            osobyListBox.DataSource = database.Data;
 
-            // nastaví zobrazované hodnoty na zakladní
-            ResetHodnot();
+            // sets the displayed values â€‹â€‹to the basic values
+            ResetValues();
         }
 
 
-        //tlaèítko pøidat novou osobu
-        private void pridatButton_Click(object sender, EventArgs e)
+        //button to add a new person
+        private void addButton_Click(object sender, EventArgs e)
         {
             try
             {
-                pridatF = new pridatForm(databaze);
-                pridatF.ShowDialog();
+                addF = new addForm(database);
+                addF.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nastala chyba pøi pøidání osoby do databáze. Chyba: {ex.Message}");
+                MessageBox.Show($"An error occurred while adding a person to the database. Error: {ex.Message}");
             }
 
 
@@ -43,33 +41,34 @@ namespace Databaze_osob
         }
 
 
-        //vybrání položky z listboxu a zobrazení hodnot
+        //selecting an item from the listbox and displaying the values
         private void osobyListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (osobyListBox.SelectedItem != null)
             {
 
-                jmenoLabel.Text = ((Osoba)osobyListBox.SelectedItem).Jmeno;
-                prijmeniLabel.Text = ((Osoba)osobyListBox.SelectedItem).Prijmeni;
-                pohlaviLabel.Text = ((Osoba)osobyListBox.SelectedItem).Pohlavi ? "Loading" : "Loading";
+                firstnameLabel.Text = ((Student)osobyListBox.SelectedItem).FirstName;
+                lastnameLabel.Text = ((Student)osobyListBox.SelectedItem).LastName;
+                emailLabel.Text = ((Student)osobyListBox.SelectedItem).Email;
+                groupLabel.Text = ((Student)osobyListBox.SelectedItem).Group_ID.ToString();
 
-                vekLabel.Text = ((Osoba)osobyListBox.SelectedItem).ID.ToString();
+                idLabel.Text = ((Student)osobyListBox.SelectedItem).ID.ToString();
             }
         }
 
 
-        //vymaže osobu z databáze
-        private void odebratButton_Click(object sender, EventArgs e)
+        //deletes the person from the database
+        private void deleteButton_Click(object sender, EventArgs e)
         {
             try
             {
-                databaze.OdeberZaznam((Osoba)osobyListBox.SelectedItem);
-                ResetHodnot();
+                database.RemoveRecord((Student)osobyListBox.SelectedItem);
+                ResetValues();
                 RefreshData();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nastala chyba pøi odebrání osoby z databáze. Chyba: {ex.Message}");
+                MessageBox.Show($"An error occurred while removing a person from the database. Error: {ex.Message}");
             }
 
             
@@ -77,156 +76,87 @@ namespace Databaze_osob
         }
 
 
-
-        //editace vybrané Osoby
-        private void upravitButton_Click(object sender, EventArgs e)
+        // serialization and saving the database to xml after closing the main form
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-
             try
             {
-                if (osobyListBox.SelectedItem != null)
-                {
-                    editF = new editForm((Osoba)osobyListBox.SelectedItem);
-                    editF.ShowDialog();
-                }
+                database.saveRecord();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nastala chyba pøi editaci osoby v databázi. Chyba: {ex.Message}");
-            }
-
-
-            RefreshData();
-
-        }
-
-   
-
-        //serializace a uložení databaze do xml po zavøení hlavního formuláøe
-        private void FormHlavni_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                databaze.Uloz();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Nastala chyba pøi ukládání dat do souboru. Chyba: {ex.Message}");
+                MessageBox.Show($"An error occurred while saving data to the file. Error: {ex.Message}");
             }
         }
 
-        //deserializace a nahrání databáze z xml po zapnutí programu
-        private void FormHlavni_Load(object sender, EventArgs e)
+        //deserialization and uploading the database from xml after starting the program
+        private void FormMain_Load(object sender, EventArgs e)
         {
 
             try
             {
-                databaze.Nahraj();
+                database.getRecord();
                 RefreshData();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nastala chyba pøi nahrávání dat ze souboru. Chyba: {ex.Message}");
+                MessageBox.Show($"An error occurred while uploading data from the file. Error: {ex.Message}");
             }
 
 
         }
 
-    
-        // resetuje vypsané hodnoty o Osobì na "-" a na "";
-        public void ResetHodnot()
+
+        // resets the values â€‹â€‹about Student to "-" and to ""
+        public void ResetValues()
         {
-            jmenoLabel.Text = "-";
-            prijmeniLabel.Text = "-";
-            pohlaviLabel.Text = "-";
-            datumNarozeniLabel.Text = "-";
-            vekLabel.Text = "";
+            firstnameLabel.Text = "-";
+            lastnameLabel.Text = "-";
+            groupLabel.Text = "-";
+            emailLabel.Text = "-";
+            idLabel.Text = "";
         }
 
-        //odpovjí a pøipojí data k listu aby se listbox obnovil
+        //appends the data to the sheet to refresh the listbox
         public void RefreshData()
         {
             osobyListBox.DataSource = null;
-            osobyListBox.DataSource = databaze.Data;
+            osobyListBox.DataSource = database.Data;
+            listBox1.DataSource = database.Data1;
         }
 
-        //info
-        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("");
-        }
-
-        //konec programu
+        //close program
         private void konecToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
 
-        //seøadí list podle toho co se klikne
-        private void podleJménaToolStripMenuItem_Click(object sender, EventArgs e)
+        //sorts the sheet according to what is clicked
+        private void sortToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int podleCeho = 0;
+            int sortby = 0;
             if ((sender as ToolStripMenuItem).Text == "By First Name")
-                podleCeho = 1;
+                sortby = 1;
             if ((sender as ToolStripMenuItem).Text == "By Last Name")
-                podleCeho = 2;
+                sortby = 2;
             if ((sender as ToolStripMenuItem).Text == "By ID")
-                podleCeho = 3;
+                sortby = 3;
 
 
             try 
             {
-            databaze.Serad(podleCeho);
+            database.sortRecords(sortby);
             RefreshData();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nastala chyba pøi øazení dat. Chyba: {ex.Message}");
+                MessageBox.Show($"An error occurred while sorting the data. Error: {ex.Message}");
             }
         }
 
 
-        //  zapne/vypne nabidku filtru
-        private void filterButton_Click(object sender, EventArgs e)
-        {
 
-            filterPanel.Visible = filterPanel.Visible ? false : true;
-            filterComboBox.SelectedItem = filterComboBox.Items[0];
-        }
-
-        //potvrdí filtr
-        private void filterOK_Click(object sender, EventArgs e)
-        {
-            filterPanel.Visible = false;
-            filterButton.Visible = false;
-            filterNoButton.Visible = true;
-
-            try
-            { 
-            databaze.Filtruj(filterComboBox.Text);
-            osobyListBox.DataSource = databaze.FiltrovanaData;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Nastala chyba pøi filtrování dat. Chyba: {ex.Message}");
-            }
-        }
-
-        // když je zapnutý filtr tak ho zruší
-        private void filterNoButton_Click(object sender, EventArgs e)
-        {
-            filterPanel.Visible = false;
-            filterButton.Visible = true;
-            filterNoButton.Visible = false;
-            
-            databaze.ResetFiltru();
-            RefreshData();
-
-            
-
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -271,6 +201,94 @@ namespace Databaze_osob
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void datumNarozeniLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                GroupF = new GroupF(database);
+                GroupF.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error {ex.Message}");
+            }
+
+
+            RefreshData();
+        }
+
+        private void pohlaviLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void detailyPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+
+                label10.Text = ((Group)listBox1.SelectedItem).GroupID.ToString();
+                label11.Text = ((Group)listBox1.SelectedItem).GroupName;
+                label15.Text = ((Group)listBox1.SelectedItem).GroupMark.ToString();
+
+                database.Group_Members(Convert.ToInt32(label10.Text));
+                listBox2.DataSource = database.FilteredData;
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            database.Group_Members(Convert.ToInt32(textBox1.Text));
+            int numbers = database.FilteredData.Count();
+            if (numbers == 4)
+            {
+                MessageBox.Show($"Group is full - already has 4 members");
+            }
+            else
+            {
+                editF = new editForm((Student)osobyListBox.SelectedItem, int.Parse(textBox1.Text));
+            }
+            Application.Restart();
+            Environment.Exit(0);
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+            Environment.Exit(0);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Group group = (Group)listBox1.SelectedItem;
+            this.group = group;
+            int id = int.Parse(textBox2.Text);
+            try
+            {
+
+                group.GroupMark = id;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($" {ex.Message}");
+            }
+            Application.Restart();
+            Environment.Exit(0);
         }
     }
 
